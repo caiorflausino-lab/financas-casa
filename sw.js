@@ -1,5 +1,5 @@
 // Service worker: o app abre mesmo sem internet. Os dados ficam com o Firebase (que também guarda offline).
-const CACHE = "financas-v1";
+const CACHE = "financas-v2";
 const CORE = ["./", "index.html", "config.js", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "icons/apple-touch-icon.png"];
 const SDK = /^https:\/\/www\.gstatic\.com\/firebasejs\/|^https:\/\/fonts\.(googleapis|gstatic)\.com\//;
 self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).then(() => self.skipWaiting())); });
